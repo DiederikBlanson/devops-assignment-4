@@ -111,11 +111,6 @@
         name: "join_cmd_holder"
         cmd: "{{ join_cmd.stdout }}"
 
-    # todo: below can be deleted
-    - name: print hostvars
-      ansible.builtin.debug:
-        msg: "Secret password is {{ hostvars['join_cmd_holder']['cmd'] }}"
-
 - hosts: worker
   tasks:
     - name: print join cmd
